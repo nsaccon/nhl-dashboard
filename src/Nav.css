@@ -1,0 +1,17 @@
+.nav{
+    position: fixed;
+    top: 0;
+    padding: 25px;
+    width: 100%;
+    z-index: 1;
+    height: 40px;
+    background-color: grey;
+}
+
+.nav > img{
+    position: fixed;
+    width: 40px;
+    left: 0;
+    object-fit: contain;
+    padding-left: 25px;
+}
