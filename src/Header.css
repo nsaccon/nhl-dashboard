@@ -15,7 +15,7 @@
     object-fit: cover;
 }
 
-.header_titles{
+.header_content{
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -28,10 +28,35 @@
     
 }
 
-.header_titles > h1{
+.header_content > h1{
     font-size: 3.125rem;
 }
-.header_titles > h2{
+.header_content > h2{
     font-size: 2rem;
     font-weight: normal;
+}
+
+.header_buttons{
+    margin-top: 10%;
+}
+
+.header_buttons > button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 25%;
+    color: white;
+    background-color: grey;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.header_buttons > button:hover{
+    border: 2px solid white;
+}
+
+.header_buttonPlayer{
+    margin-right: 15%;
 }
