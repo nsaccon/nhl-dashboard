@@ -23,7 +23,6 @@ const SearchScreen = () => {
             setCardData(response.data);
             setSubmitting(false);
           }, (error) => {
-            console.log(error);
             setSubmitting(false);
           });        
       }
@@ -40,9 +39,6 @@ const SearchScreen = () => {
   return (
     <div className="searchScreen" id='searchScreen'>
         <h1>Young Guns Search</h1>
-        {submitting &&
-       <div>Loading Message...</div>
-     }
       <form className="searchScreen_form" onSubmit={handleSubmit}>
         <label className="searchScreen_firstName">
           Player First Name:
@@ -149,7 +145,7 @@ const SearchScreen = () => {
         </div>
 
         </div>
-        <input type="submit" value="Submit" />
+        <input className='searchScreen_submit' type="submit" value={submitting ? "Searching...." : "Search"} />
       </form>
       {cardData ?
       <div className="searchScreen_results">

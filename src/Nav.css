@@ -1,44 +1,44 @@
-.nav{
-    position: absolute;
-    display: flex;
-    top: 0;
-    padding: 25px;
-    width: 100%;
-    z-index: 1;
-    height: 40px;
-    background-color: #126e82;
-    margin-left: auto;
-    margin-right: auto;
+.nav {
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1;
+  height: 40px;
+  background-color: #126e82;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.nav_logo{
-    position: relative;
-    width: 150px;
-    left: 0;
-    object-fit: contain;
-    padding-left: 20px;
+.nav_logo {
+  position: relative;
+  width: 150px;
+  left: 0;
+  object-fit: contain;
+  padding-left: 20px;
 }
 
-.nav_contents{
-    display: flex;
-    
+.nav_contents {
+  display: flex;
 }
 
-.nav_pageTitles{
-    position: relative;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+.nav_pageTitles {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.nav_pageTitles > a{
-    cursor: pointer;
-    position: relative;
-    margin-right: 60px;
-    color: #d8e3e7;
-    font-size: 1.45rem;
+.nav_pageTitles > a {
+  cursor: pointer;
+  position: relative;
+  margin-right: 60px;
+  color: #d8e3e7;
+  font-size: 1.45rem;
 }
 
-.nav_pageTitles > a:hover{
-    text-decoration: underline;
+.nav_pageTitles > a:hover {
+  text-decoration: underline;
 }
