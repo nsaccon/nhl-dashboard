@@ -1,4 +1,5 @@
 import React, { useReducer, useState } from "react";
+import axios from "./axios";
 import './SearchScreen.css'
 
 const formReducer = (state, event) => {
@@ -11,16 +12,18 @@ const formReducer = (state, event) => {
 const SearchScreen = () => {
     const [formData, setFormData] = useReducer(formReducer, {});
     const [submitting, setSubmitting] = useState(false);
+    const [cardData, setCardData] = useState(false);
     
     const handleSubmit = event => {
         event.preventDefault();
         setSubmitting(true);
-
-        setTimeout(() => {
-            setSubmitting(false);
-          }, 3000)
-        alert(formData.onlyIncludeGraded);
-        
+          axios.post('/youngguns', formData)
+          .then((response) => {
+            setCardData(response);
+            console.log(response.data);
+          }, (error) => {
+            console.log(error);
+          });        
       }
 
       const handleChange = event => {
