@@ -5,6 +5,7 @@
 .card > img{
     height: 250px;
     margin: 25px;
+    border-radius: 5px;
 }
 .card > img:hover{
     height: 500px;
@@ -13,8 +14,9 @@
 .card{
     margin-bottom: 10px;
     border-radius: 10px;
-    border: 2px solid black;
+    
     display: flex;
+    background-color: #d8e3e7;
 }
 
 .card_removeBtn{
@@ -22,8 +24,10 @@
     margin-right: 10px;
     height: 30px;
     width: 30px;
-    background-color: darkred;
-    color: white;
+    font-weight: 800;
+    background-color: #51c4d3;
+    border-radius: 3px;
+    color: #132c33;
     border: none;
     text-decoration: none;
     cursor: pointer;
