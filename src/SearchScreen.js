@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from "react";
+import Card from './Card';
 import axios from "./axios";
-import './SearchScreen.css'
+import './SearchScreen.css';
 
 const formReducer = (state, event) => {
     return {
@@ -19,10 +20,11 @@ const SearchScreen = () => {
         setSubmitting(true);
           axios.post('/youngguns', formData)
           .then((response) => {
-            setCardData(response);
-            console.log(response.data);
+            setCardData(response.data);
+            setSubmitting(false);
           }, (error) => {
             console.log(error);
+            setSubmitting(false);
           });        
       }
 
@@ -97,9 +99,64 @@ const SearchScreen = () => {
         <input className="searchScreen_includeLotInput" name="includeLot" type="checkbox" onChange={handleChange} />
         </div>
 
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeFoil">
+           Include Foil
+        </label>
+        <input className="searchScreen_includeFoilInput" name="includeFoil" type="checkbox" onChange={handleChange} />
+        </div>
+
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeHighGloss">
+           Include High Gloss
+        </label>
+        <input className="searchScreen_includeHighGlossInput" name="includeHighGloss" type="checkbox" onChange={handleChange} />
+        </div>
+
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeExclusive">
+           Include Exclusive
+        </label>
+        <input className="searchScreen_includeExclusiveInput" name="includeExclusive" type="checkbox" onChange={handleChange} />
+        </div>
+
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeAcetate">
+           Include Acetate
+        </label>
+        <input className="searchScreen_includeAcetateInput" name="includeAcetate" type="checkbox" onChange={handleChange} />
+        </div>
+
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeClearCut">
+           Include Clear Cut
+        </label>
+        <input className="searchScreen_includeClearCutInput" name="includeClearCut" type="checkbox" onChange={handleChange} />
+        </div>
+
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeCanvas">
+           Include Canvas
+        </label>
+        <input className="searchScreen_includeCanvasCutInput" name="includeCanvasCut" type="checkbox" onChange={handleChange} />
+        </div>
+
+        <div className='searchScreen_checkbox'>
+        <label className="searchScreen_includeSpeckled">
+           Include Speckled
+        </label>
+        <input className="searchScreen_includeSpeckledCutInput" name="includeSpeckledCut" type="checkbox" onChange={handleChange} />
+        </div>
+
         </div>
         <input type="submit" value="Submit" />
       </form>
+      {cardData ?
+      <div className="searchScreen_results">
+        {cardData.cards.map( (card) => <Card cardData={card} distinctions={cardData.distinctions} />)} 
+      </div>
+      : <div></div>
+}
     </div>
   );
 };
