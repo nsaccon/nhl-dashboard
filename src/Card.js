@@ -15,7 +15,7 @@ const Card = ({ cardData, distinctions }) => {
       <div className="card_details">
         <h1>{cardData.title}</h1>
         <div className="card_price">
-          {cardData.price.toLocaleString("en-US", {
+          {cardData.total.toLocaleString("en-US", {
             style: "currency",
             currency: "USD",
           })}{" "}

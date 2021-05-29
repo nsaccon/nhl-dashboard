@@ -41,7 +41,7 @@ const SearchScreen = () => {
         <h1>Young Guns Search</h1>
       <form className="searchScreen_form" onSubmit={handleSubmit}>
         <label className="searchScreen_firstName">
-          Player First Name:
+          Player First Name: (Optional)
         </label>
         <input className="searchScreen_firstNameInput" type="text" name="firstName" onChange={handleChange} />
         <label className="searchScreen_lastName">
@@ -49,7 +49,7 @@ const SearchScreen = () => {
         </label>
         <input className="searchScreen_lastNameInput" type="text" name="lastName" onChange={handleChange} />
         <label className="searchScreen_excludeCSV">
-          Exclude Terms:
+          Exclude Terms: (Optional)
         </label>
         <input className="searchScreen_excludeCSVInput" type="text" name="excludeCSV" onChange={handleChange} />
         <div className='searchScreen_checkboxes'>
