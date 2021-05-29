@@ -1,12 +1,12 @@
 .nav{
-    position: fixed;
+    position: absolute;
     display: flex;
     top: 0;
     padding: 25px;
     width: 100%;
     z-index: 1;
     height: 40px;
-    background-color: grey;
+    background-color: #126e82;
 }
 
 .nav_logo{
@@ -33,7 +33,7 @@
     cursor: pointer;
     position: relative;
     margin-right: 60px;
-    color: white;
+    color: #d8e3e7;
     font-size: 1.45rem;
 }
 

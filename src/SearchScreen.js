@@ -38,7 +38,7 @@ const SearchScreen = () => {
     
 
   return (
-    <div className="searchScreen">
+    <div className="searchScreen" id='searchScreen'>
         <h1>Young Guns Search</h1>
         {submitting &&
        <div>Loading Message...</div>
