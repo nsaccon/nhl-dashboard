@@ -22,7 +22,7 @@ const Card = ({ cardData, distinctions }) => {
           {cardData.currencyType}
         </div>
         <div className="card_distinctions">
-          {cardData.distinctions.map((dist) => distinctions[dist] + " ")}
+          {cardData.distinctions.map((dist) => distinctions[dist] !== "None" ? distinctions[dist] + " " : "" )}
         </div>
       </div>
       <button onClick={hideCard} className='card_removeBtn'>X</button>

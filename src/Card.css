@@ -36,3 +36,9 @@
     margin-left: auto;
     order: 2;
 }
+
+.card_price{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 2rem;
+}
