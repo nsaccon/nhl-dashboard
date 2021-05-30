@@ -16,7 +16,7 @@ const Header = () => {
         <button>Teams</button>
       </div>
       </div>
-      
+      <div className="header--fadeBottom" />
     </div>
   );
 };

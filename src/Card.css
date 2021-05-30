@@ -3,13 +3,13 @@
 }
 
 .card > img{
-    height: 250px;
+    width: 25%;
     margin: 40px;
     border-radius: 5px;
     transition: transform 350ms;
 }
 .card > img:hover{
-    transform: scale(2);
+    transform: scale(1.12);
     margin: 40px;
 }
 .card{
