@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import Card from './Card';
+import SearchSummary from './SearchSummary'
 import axios from "./axios";
 import './SearchScreen.css';
 
@@ -147,11 +148,18 @@ const SearchScreen = () => {
         </div>
         <input className='searchScreen_submit' type="submit" value={submitting ? "Searching...." : "Search"} />
       </form>
+      
+      {cardData ?
+      <div className="searchScreen_summary">
+        <SearchSummary cardData={cardData} /> 
+      </div>
+      :<></>}
+
       {cardData ?
       <div className="searchScreen_results">
         {cardData.cards.map( (card) => <Card cardData={card} distinctions={cardData.distinctions} />)} 
       </div>
-      : <div></div>
+      : <></>
 }
     </div>
   );
