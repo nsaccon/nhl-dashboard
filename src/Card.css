@@ -15,7 +15,7 @@
 .card{
     margin-bottom: 10px;
     border-radius: 10px;
-    
+    width: 75%;
     display: flex;
     background-color: #d8e3e7;
 }

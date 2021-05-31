@@ -61,3 +61,7 @@ input[type=submit]{
     margin-right: auto;
     width: 85%;
 }
+
+.searchScreen_return{
+    display: flex;
+}

@@ -1,9 +1,10 @@
 .searchSummary{
-    margin: 5px;
-    width: 25%;
+    right: 10px;
+    bottom: 40px;
     background-color: #d8e3e7;
     border-radius: 10px;
     padding: 10px;
+    position: fixed;
 }
 
 .searchSummary > h1{

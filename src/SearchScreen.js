@@ -148,19 +148,21 @@ const SearchScreen = () => {
         </div>
         <input className='searchScreen_submit' type="submit" value={submitting ? "Searching...." : "Search"} />
       </form>
-      
-      {cardData ?
-      <div className="searchScreen_summary">
-        <SearchSummary cardData={cardData} /> 
-      </div>
-      :<></>}
+      <div className="searchScreen_return">
 
       {cardData ?
       <div className="searchScreen_results">
         {cardData.cards.map( (card) => <Card cardData={card} distinctions={cardData.distinctions} />)} 
       </div>
-      : <></>
-}
+      : <></>}
+
+      {cardData ?
+      <div className="searchScreen_summary">
+        <SearchSummary cardData={cardData} /> 
+      </div>
+      :<></>}
+      </div>
+
     </div>
   );
 };
