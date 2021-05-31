@@ -35,6 +35,13 @@ const SearchScreen = () => {
           value: isCheckbox ? event.target.checked : event.target.value,
         });
       }
+
+      function removeCard(id){
+        let filteredArray = cardData.cards.filter(card => card.id !== id);
+        cardData.cards = filteredArray;
+        cardData.cardsFound -= 1;
+        setCardData(cardData);
+      }
     
 
   return (
@@ -152,7 +159,7 @@ const SearchScreen = () => {
 
       {cardData ?
       <div className="searchScreen_results">
-        {cardData.cards.map( (card) => <Card cardData={card} distinctions={cardData.distinctions} />)} 
+        {cardData.cards.map( (card) => <Card key={card.id} cardData={card} distinctions={cardData.distinctions} removeCard={removeCard} />)} 
       </div>
       : <></>}
 

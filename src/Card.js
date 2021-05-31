@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import "./Card.css";
 
-const Card = ({ cardData, distinctions }) => {
+const Card = ({ cardData, distinctions, removeCard }) => {
   const [showCard, setShowCard] = useState(true)
 
   function hideCard(){
     setShowCard(false);
+    removeCard(cardData.id);
   }
 
   return (

@@ -2,6 +2,7 @@ import React from 'react'
 import './SearchSummary.css'
 
 const SearchSummary = ({cardData}) => {
+
     return (
         <div className='searchSummary'>
             <h1>Search Result Summary</h1>
